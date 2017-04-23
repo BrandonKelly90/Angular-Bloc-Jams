@@ -39,7 +39,7 @@ body.landing {
 	width: 33.3%;
 	padding: 2rem;
 	text-align: center;
-	opacity: 0;
+	opacity: 1;
 	-webkit-transform: scaleX(0.5) translateY(3rem) rotate(0deg);
 	-moz-transform: scaleX(0.5) translateY(3rem) rotate(0deg);
 	transform: scaleX(0.5) translateY(3rem) rotate(0deg);
