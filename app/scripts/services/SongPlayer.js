@@ -1,6 +1,6 @@
 (function() {
     function SongPlayer() {
-        var SongPlayer =
+        var SongPlayer = {};
 
         var currentSong = null;
         /*
@@ -41,7 +41,7 @@
             }
         };
 
-        Song.pause = function(song) {
+        SongPlayer.pause = function(song) {
             currentBuzzObject.pause();
             song.playing = false;
         };
