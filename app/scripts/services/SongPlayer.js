@@ -4,6 +4,7 @@
 
         /** @desc currentBuzzObject music file
         * @type {Object}
+        */
         var currentSong = null;
 
         /**
@@ -56,7 +57,7 @@
             }
             else if (currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
-                    playSong(song);
+                    currentBuzzObject.play();
                 }
             }
         };
