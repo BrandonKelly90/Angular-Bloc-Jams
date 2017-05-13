@@ -35,9 +35,14 @@
          * @param {Object} song
          */
         var playSong = function(song) {
-                currentBuzzObject.play();
-                song.playing = true;
+            currentBuzzObject.play();
+            song.playing = true;
         };
+
+        var stopSong = function(song) {
+            currentBuzzObject.stop();
+            song.playing = null;
+        }
 
         var getSongIndex = function(song) {
             return currentAlbum.songs.indexOf(song);
@@ -85,10 +90,23 @@
             currentSongIndex--;
 
             if(currentSongIndex < 0) {
-                currentBuzzObject.stop();
-                SongPlayer.currentSong.playing = null;
+                stopSong();
             }
             else {
+                var song = currentAlbum.songs[currentSongIndex];
+                setSong(song);
+                playSong(song);
+            }
+        };
+
+        SongPlayer.next = function() {
+            var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+            currentSongIndex++;
+
+            if(currentSongIndex < 0) {
+                stopSong();
+            }
+            else{
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
                 playSong(song);
