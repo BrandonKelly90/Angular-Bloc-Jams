@@ -66,8 +66,7 @@
             if (SongPlayer.currentSong !== song) {
                 setSong(song);
                 playSong(song);
-            }
-            else if (SongPlayer.currentSong === song) {
+            } else if (SongPlayer.currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
                     currentBuzzObject.play();
                 }
@@ -91,8 +90,7 @@
 
             if(currentSongIndex < 0) {
                 stopSong();
-            }
-            else {
+            } else {
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
                 playSong(song);
@@ -105,8 +103,7 @@
 
             if(currentSongIndex < 0) {
                 stopSong();
-            }
-            else{
+            } else{
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
                 playSong(song);
