@@ -65,6 +65,8 @@
         */
         SongPlayer.currentTime = null;
 
+        SongPlayer.volume = null;
+
         /**
         * @function SongPlayer.play
         * @desc Takes a song as a parameter and tests to see whether or not the currentBuzzObject
@@ -130,6 +132,13 @@
         SongPlayer.setCurrentTime = function(time) {
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
+            }
+        };
+
+        SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+                SongPlayer.volume = volume;
             }
         };
 
