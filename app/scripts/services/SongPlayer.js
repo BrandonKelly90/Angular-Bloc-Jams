@@ -1,5 +1,5 @@
 (function() {
-    function SongPlayer($rootScope, Fixtures) {
+    function SongPlayer ($rootScope, Fixtures) {
         var SongPlayer = {};
 
         var currentAlbum = Fixtures.getAlbum();
@@ -64,6 +64,8 @@
         * @type {number}
         */
         SongPlayer.currentTime = null;
+
+        SongPlayer.volume = 60;
 
         /**
         * @function SongPlayer.play
@@ -130,6 +132,13 @@
         SongPlayer.setCurrentTime = function(time) {
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
+            }
+        };
+
+        SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+                SongPlayer.volume = volume;
             }
         };
 
