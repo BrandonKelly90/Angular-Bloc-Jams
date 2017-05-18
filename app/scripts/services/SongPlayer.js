@@ -1,5 +1,5 @@
 (function() {
-    function SongPlayer($rootScope, Fixtures) {
+    function SongPlayer ($rootScope, Fixtures) {
         var SongPlayer = {};
 
         var currentAlbum = Fixtures.getAlbum();
@@ -65,7 +65,7 @@
         */
         SongPlayer.currentTime = null;
 
-        SongPlayer.volume = null;
+        SongPlayer.volume = 60;
 
         /**
         * @function SongPlayer.play
